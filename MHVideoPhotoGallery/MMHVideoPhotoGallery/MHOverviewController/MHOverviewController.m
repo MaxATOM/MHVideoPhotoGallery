@@ -29,7 +29,13 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    self.UICustomization = self.galleryViewController.UICustomization;
+    
     self.title =  MHGalleryLocalizedString(@"overview.title.current");
+    
+    if (self.UICustomization.overviewTitleView)
+        self.navigationItem.titleView = self.UICustomization.overviewTitleView;
+
     
     UIBarButtonItem *doneBarButton = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(donePressed)];
     

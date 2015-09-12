@@ -26,6 +26,7 @@
 
 @property (strong, nonatomic) UICollectionView      *collectionView;
 @property (strong,nonatomic ) MHMediaPreviewCollectionViewCell *clickedCell;
+@property (strong, nonatomic) MHUICustomization *UICustomization;
 @property (nonatomic)         NSInteger             currentPage;
 @property (nonatomic, strong) NSArray               *galleryItems;
 

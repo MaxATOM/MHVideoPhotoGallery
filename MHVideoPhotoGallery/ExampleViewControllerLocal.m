@@ -113,6 +113,15 @@
                 [blockGallery dismissViewControllerAnimated:YES dismissImageView:nil completion:nil];
             };
             
+            MHUICustomization *custom = [MHUICustomization new];
+            UILabel *lblTitle = [[UILabel alloc] init];
+            lblTitle.text = @" Overview ";
+            lblTitle.textColor = [UIColor colorWithRed:0.890 green:0.169 blue:0.427 alpha:1.000];
+            lblTitle.font = [UIFont fontWithName:@"Futura" size:24.0];
+            [lblTitle sizeToFit];
+            custom.overviewTitleView = lblTitle;
+            gallery.UICustomization = custom;
+            
             [self presentMHGalleryController:gallery animated:YES completion:nil];
 
         }else{
