@@ -231,7 +231,7 @@
 -(void)configureTextView:(UITextView*)textView {
     textView.backgroundColor = [UIColor clearColor];
     textView.font = [UIFont systemFontOfSize:15];
-    textView.textColor = [UIColor blackColor];
+    textView.textColor = self.UICustomization.titleAndDescriptionStringColor;
     textView.scrollEnabled = NO;
     textView.editable = NO;
     textView.delegate = self;
