@@ -78,5 +78,9 @@
     return [self.class.alloc initWithImage:image];
 }
 
+- (NSString *)description {
+    return self.descriptionString;
+}
+
 @end
 

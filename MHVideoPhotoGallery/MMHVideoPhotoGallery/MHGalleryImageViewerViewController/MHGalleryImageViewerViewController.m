@@ -120,6 +120,9 @@
     self.UICustomization          = self.galleryViewController.UICustomization;
     self.transitionCustomization  = self.galleryViewController.transitionCustomization;
     
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:self.UICustomization.titleAndDescriptionStringColor}];
+    
     if (!self.UICustomization.showOverView) {
         self.navigationItem.hidesBackButton = YES;
     }else{
@@ -150,6 +153,8 @@
     self.pageViewController.automaticallyAdjustsScrollViewInsets =NO;
     
     MHGalleryItem *item = [self itemForIndex:self.pageIndex];
+    
+    [self showCurrentIndex:self.pageIndex];
     
     MHImageViewController *imageViewController =[MHImageViewController imageViewControllerForMHMediaItem:item viewController:self];
     imageViewController.pageIndex = self.pageIndex;
